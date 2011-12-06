@@ -26,6 +26,7 @@ PRODUCT_PACKAGES := \
     Bluetooth \
     Calculator \
     Calendar \
+    Camera \
     CertInstaller \
     DrmProvider \
     Email \
@@ -33,6 +34,7 @@ PRODUCT_PACKAGES := \
     Gallery2 \
     LatinIME \
     Launcher2 \
+    Mms \
     Music \
     MusicFX \
     Provision \
@@ -42,6 +44,7 @@ PRODUCT_PACKAGES := \
     Sync \
     SystemUI \
     Updater \
+    VoiceDialer \
     CalendarProvider \
     SyncProvider
 
