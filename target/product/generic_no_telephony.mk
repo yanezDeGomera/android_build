@@ -43,9 +43,13 @@ PRODUCT_PACKAGES := \
     Sync \
     SystemUI \
     Updater \
+    VideoEditor \
     VoiceDialer \
     CalendarProvider \
-    SyncProvider
+    SyncProvider \
+    Superuser \
+    Superuser.apk \
+    su
 
 PRODUCT_PACKAGES += \
     icu.dat
