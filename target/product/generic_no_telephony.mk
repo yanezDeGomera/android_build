@@ -41,13 +41,16 @@ PRODUCT_PACKAGES := \
     Phone \
     QuickSearchBox \
     Settings \
+    Stk \
     Sync \
     SystemUI \
     Updater \
     VideoEditor \
     VoiceDialer \
     CalendarProvider \
+    SpareParts \
     SyncProvider \
+    Torch \
     Superuser \
     Superuser.apk \
     su
