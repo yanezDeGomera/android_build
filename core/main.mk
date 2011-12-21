@@ -325,6 +325,7 @@ endif
 endif
 
 ADDITIONAL_BUILD_PROPERTIES += net.bt.name=Android
+ADDITIONAL_BUILD_PROPERTIES += ro.HOME_APP_ADJ=1
 
 # enable vm tracing in files for now to help track
 # the cause of ANRs in the content process
