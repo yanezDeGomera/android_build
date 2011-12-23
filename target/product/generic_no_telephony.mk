@@ -20,41 +20,31 @@
 PRODUCT_POLICY := android.policy_phone
 
 PRODUCT_PACKAGES := \
-    AccountAndSyncSettings \
     DeskClock \
     AlarmProvider \
     Bluetooth \
     Calculator \
     Calendar \
-    Camera \
     CertInstaller \
     DrmProvider \
     Email \
     Exchange \
-    FileManager \
     Gallery2 \
     LatinIME \
     Launcher2 \
-    Mms \
     Music \
-    MusicFX \
     Provision \
     Phone \
     QuickSearchBox \
     Settings \
-    Stk \
     Sync \
     SystemUI \
     Updater \
-    VideoEditor \
-    VoiceDialer \
     CalendarProvider \
-    SpareParts \
     SyncProvider \
-    Torch \
-    Superuser \
-    Superuser.apk \
-    su
+    bluetooth-health \
+    hostapd \
+    wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
     icu.dat
