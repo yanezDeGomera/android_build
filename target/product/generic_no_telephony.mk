@@ -31,7 +31,7 @@ PRODUCT_PACKAGES := \
     Exchange \
     Gallery2 \
     LatinIME \
-    Launcher2 \
+    Trebuchet \
     Music \
     Provision \
     Phone \
