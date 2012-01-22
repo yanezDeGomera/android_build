@@ -240,6 +240,8 @@ ifneq (,$(user_variant))
   else # userdebug
     # Target is insecure in userdebug builds.
     ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+    # Visual for main thread lag is disabled.
+    ADDITIONAL_BUILD_PROPERTIES += persist.sys.strictmode.visual=0
 
     # Pick up some extra useful tools
     tags_to_install += debug
