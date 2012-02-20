@@ -32,7 +32,6 @@ PRODUCT_PACKAGES := \
     Gallery2 \
     LatinIME \
     Music \
-    Provision \
     Phone \
     QuickSearchBox \
     Settings \
