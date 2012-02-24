@@ -33,7 +33,6 @@ PRODUCT_PACKAGES := \
     LatinIME \
     Music \
     Phone \
-    QuickSearchBox \
     Settings \
     Sync \
     SystemUI \
