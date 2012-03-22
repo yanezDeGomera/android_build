@@ -20,6 +20,7 @@ else
   FILE_NAME_TAG := $(BUILD_NUMBER)
 endif
 
+$(warning $(PRODUCT_COPY_FILES))
 # -----------------------------------------------------------------
 # Define rules to copy PRODUCT_COPY_FILES defined by the product.
 # PRODUCT_COPY_FILES contains words like <source file>:<dest file>.
@@ -37,8 +38,7 @@ $(foreach cf,$(PRODUCT_COPY_FILES), \
     $(if $(filter $(unique_product_copy_files_destinations),$(_dest)),, \
         $(eval _fulldest := $(call append-path,$(PRODUCT_OUT),$(_dest))) \
         $(eval $(call copy-one-file,$(_src),$(_fulldest))) \
-        $(eval ALL_DEFAULT_INSTALLED_MODULES += $(_fulldest)) \
-        $(eval unique_product_copy_files_destinations += $(_dest))))
+        $(eval ALL_DEFAULT_INSTALLED_MODULES += $(_fulldest))))
 unique_product_copy_files_destinations :=
 
 # -----------------------------------------------------------------
@@ -1285,13 +1285,13 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(OTATOOLS)
 
 .PHONY: otapackage bacon
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-bacon: otapackage lord
+bacon: otapackage yanez
 ifneq ($(TARGET_CUSTOM_RELEASETOOL),)
 	@echo "Running releasetool"
 	$(hide) $(TARGET_CUSTOM_RELEASETOOL)
 else
-lord: otapackage
-	$(hide) ./vendor/lord/tools/squisher
+yanez: otapackage
+	$(hide) ./vendor/yanez/tools/squisher
 endif
 
 # -----------------------------------------------------------------
