@@ -20,6 +20,7 @@ else
   FILE_NAME_TAG := $(BUILD_NUMBER)
 endif
 
+$(warning $(PRODUCT_COPY_FILES))
 # -----------------------------------------------------------------
 # Define rules to copy PRODUCT_COPY_FILES defined by the product.
 # PRODUCT_COPY_FILES contains words like <source file>:<dest file>.
@@ -38,8 +39,7 @@ $(foreach cf,$(PRODUCT_COPY_FILES), \
     $(if $(filter $(unique_product_copy_files_destinations),$(_dest)),, \
         $(eval _fulldest := $(call append-path,$(PRODUCT_OUT),$(_dest))) \
         $(eval $(call copy-one-file,$(_src),$(_fulldest))) \
-        $(eval ALL_DEFAULT_INSTALLED_MODULES += $(_fulldest)) \
-        $(eval unique_product_copy_files_destinations += $(_dest))))
+        $(eval ALL_DEFAULT_INSTALLED_MODULES += $(_fulldest))))
 unique_product_copy_files_destinations :=
 
 # -----------------------------------------------------------------
