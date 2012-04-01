@@ -1228,10 +1228,10 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(OTATOOLS)
 	   --override_device=$(override_device) \
            $(BUILT_TARGET_FILES_PACKAGE) $@
 
-.PHONY: otapackage lord
+.PHONY: otapackage yanez
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-lord: otapackage
-	$(hide) ./vendor/lord/tools/squisher
+yanez: otapackage
+	$(hide) ./vendor/yanez/tools/squisher
 
 # -----------------------------------------------------------------
 # The update package
